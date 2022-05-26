@@ -1,6 +1,14 @@
+import styles from './Header.module.scss';
+
 function Header() {
     return (
-        <h2>Header</h2>
+        <header className={styles['wrapper']}>
+            <div className={styles['inner']}>
+                {/* Logo */}
+
+                {/* Search */}
+            </div>
+        </header>
     );
 }
 
