@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import { Wrapper as PoperWrapper } from '~/components/Popper'
+import { Wrapper as PoperWrapper } from '~/components/Popper';
+import Button from '~/components/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
@@ -63,7 +64,10 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={styles['actions']}></div>
+                <div className={styles['actions']}>
+                    <Button text > Upload </Button>
+                    <Button primary> Log in </Button>
+                </div>
             </div>
         </header>
     );
