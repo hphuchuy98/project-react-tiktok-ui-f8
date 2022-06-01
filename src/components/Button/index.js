@@ -29,19 +29,19 @@ function Button ({
 
     //Remove event listener when btn is disabled
     if (disabled) {
-        Object.keys(props).forEach(key =>{
+        Object.keys(props).forEach((key) =>{
             if(key.startsWith('on') && typeof props[key] === 'function') {
                 delete props[key];
             }
-        })
+        });
     }
 
     if (to) {
-        props.to = to
-        Comp = Link
+        props.to = to;
+        Comp = Link;
     } else if (href) {
-        props.href = href
-        Comp = 'a'
+        props.href = href;
+        Comp = 'a';
     }
 
     // const classes = styles['wrapper', { primary }];

@@ -7,7 +7,7 @@ function AccountItem() {
         <div className={styles['wrapper']}>
             <img 
                 className={styles['avatar']} 
-                src='https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/f4012677b93404e20a9f713dfda944cd~c5_300x300.webp?x-expires=1653789600&x-signature=cReHV6DH35VXRFJ3a1QFlmFbovY%3D' 
+                src='https://photo-cms-plo.zadn.vn/w850/Uploaded/2022/vocgmvpi/2022_05_11/luong-thuy-linh2-2898.jpg' 
                 alt='Hoa' 
                 />
             <div className={styles['info']}>
