@@ -124,6 +124,11 @@
     cursor: pointer;
 }
 
+.action-icon {
+    display: flex;
+    justify-content: center;
+}
+
 .user-avatar {
     width: 32px;
     height: 32px;

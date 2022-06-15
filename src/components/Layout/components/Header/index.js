@@ -12,6 +12,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import Button from '~/components/Button';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon, InboxIcon } from '~/components/Icons';
+import Image from '~/components/image';
 // import 'tippy.js/dist/tippy.css';
 
 const MENU_ITEMS = [
@@ -87,7 +89,7 @@ function Header() {
             icon: <FontAwesomeIcon icon={faSignOut} />,
             title: 'Log out',
             to: '/logout',
-            separate: true,   //đường vạch trên logout
+            separate: true,   //đường vạch trên log out
         },
     ]
 
@@ -144,6 +146,27 @@ function Header() {
                                     <FontAwesomeIcon icon={faCloudUpload} />
                                 </button>
                             </Tippy>
+
+                            {/* use logo SVG of tik tok */}
+                            <Tippy 
+                                delay={[0, 200]}
+                                content="Message" 
+                                placement='bottom'
+                            >
+                                <button className={styles['action-btn']}>
+                                    <UploadIcon className={styles['action-icon']} />
+                                </button>
+                            </Tippy>
+
+                            <Tippy 
+                                delay={[0, 200]}
+                                content="Inbox" 
+                                placement='bottom'
+                            >
+                                <button className={styles['action-btn']}>
+                                    <InboxIcon className={styles['action-icon']} />
+                                </button>
+                            </Tippy>
                         </>
                     ) : (
                         <>
@@ -154,10 +177,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img 
+                            <Image 
                                 className={styles['user-avatar']} 
                                 alt="NGUYEN VAN A" 
-                                src='https://i.pinimg.com/236x/1e/0d/60/1e0d60ac07c9e0d8c0d150fb74113eb2.jpg' 
+                                src='https://i.pinimg.com/236x/1e/0d/60/1e0d60ac07c9e0d8c0d150fb74113eb2_22.jpg' 
+                                // fallback="https://i.pinimg.com/564x/e6/57/55/e65755e73d8085e30aedfa21fde07f1b.jpg"
                             />
                         ) : (
                             <button className={styles['more-btn']}>
